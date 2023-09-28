@@ -1,0 +1,38 @@
+@use "./mixins" as *;
+@use "./_variables.scss" as *;
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  @include tablet {
+    font-size: 4.5rem;
+  }
+}
+
+h2 {
+  color: $primary-color1;
+  font-size: 2rem;
+  font-weight: 600;
+  @include tablet {
+    font-size: 3rem;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  @include tablet {
+    font-size: 2.5rem;
+  }
+}
+.main__about-quote {
+  color: $primary-color1;
+  font-weight: 600;
+  font-size: 1.25rem;
+  @include tablet {
+    font-size: 1.5rem;
+  }
+  &-author {
+    font-weight: 600;
+  }
+}
