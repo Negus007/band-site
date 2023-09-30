@@ -220,21 +220,21 @@ body {
   }
 }
 
-main {
+.gallery-container {
   background-color: #fafafa;
   width: 100%;
   padding: 0.8rem 0;
 }
-main .gallery {
+.gallery-container .gallery {
   width: 90%;
   margin: 0 auto;
 }
 @media (min-width: 1280px) {
-  main .gallery {
+  .gallery-container .gallery {
     width: 80%;
   }
 }
-main .gallery__photo-section {
+.gallery-container .gallery__photo-section {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -242,12 +242,12 @@ main .gallery__photo-section {
   align-items: center;
   width: 100%;
 }
-main .gallery__photo-section img {
+.gallery-container .gallery__photo-section img {
   margin: 0.8rem 0;
   width: 100%;
 }
 @media (min-width: 720px) {
-  main .gallery__photo-section img {
+  .gallery-container .gallery__photo-section img {
     width: 31.5%;
     /*margin: 0.8rem 1.3rem 0.8rem 0;*/
   }
