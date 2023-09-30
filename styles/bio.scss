@@ -15,7 +15,7 @@ body {
 }
 
 .nav {
-  height: 12.5vh;
+  height: 11.5vh;
   width: 100vw;
   background-color: $primary-color1;
   box-sizing: border-box;
@@ -118,15 +118,8 @@ body {
     @include tablet {
       width: 80%;
     }
-    /* &-quote {
-      font-weight: bold;
-    }
-    &-quote-author {
-      font-weight: bold;
-    } */
+
     img {
-      /*  margin: 0 auto;
-      /* height: 300px; */
       width: 100%;
     }
     &-description {
@@ -139,7 +132,6 @@ body {
         width: 90%;
         @include tablet {
           width: 45%;
-          /*margin: 0 1rem 1.5rem 0;*/
         }
       }
     }
@@ -151,13 +143,13 @@ body {
   width: 100%;
   padding: 0.8rem 0;
 
-  .gallery {
+  &__gallery {
     width: 90%;
     margin: 0 auto;
     @include desktop {
       width: 80%;
     }
-    &__photo-section {
+    &-photo-section {
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
@@ -169,7 +161,6 @@ body {
         width: 100%;
         @include tablet {
           width: 31.5%;
-          /*margin: 0.8rem 1.3rem 0.8rem 0;*/
         }
       }
     }
