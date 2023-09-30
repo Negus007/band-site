@@ -12,8 +12,8 @@
 }
 @font-face {
   font-family: "Avenir Next";
-  src: "../../assets/Font/AvenirNextLTPro-Demi.otf";
-  src: "../../assets/Font/Alternative files/AvenirNextLTProDemi.ttf";
+  src: "../../assets/Font/AvenirNextLTPro-Bold.otf";
+  src: "../../assets/Font/Alternative files/AvenirNextLTProBold.ttf";
   font-weight: 700;
 }
 h1 {
@@ -220,21 +220,21 @@ body {
   }
 }
 
-article {
+main {
   background-color: #fafafa;
   width: 100%;
   padding: 0.8rem 0;
 }
-article .gallery {
+main .gallery {
   width: 90%;
   margin: 0 auto;
 }
 @media (min-width: 1280px) {
-  article .gallery {
+  main .gallery {
     width: 80%;
   }
 }
-article .gallery__photo-section {
+main .gallery__photo-section {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -242,12 +242,12 @@ article .gallery__photo-section {
   align-items: center;
   width: 100%;
 }
-article .gallery__photo-section img {
+main .gallery__photo-section img {
   margin: 0.8rem 0;
   width: 100%;
 }
 @media (min-width: 720px) {
-  article .gallery__photo-section img {
+  main .gallery__photo-section img {
     width: 31.5%;
     /*margin: 0.8rem 1.3rem 0.8rem 0;*/
   }
@@ -255,7 +255,7 @@ article .gallery__photo-section img {
 
 .footer {
   position: relative;
-  width: 100vw;
+  width: 100%;
   color: white;
   background-color: #323232;
   padding: 1.5rem 0;

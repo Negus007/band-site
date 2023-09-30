@@ -145,7 +145,7 @@ body {
     }
   }
 }
-article {
+main {
   background-color: $secondary-color3;
 
   width: 100%;
@@ -177,7 +177,7 @@ article {
 }
 .footer {
   position: relative;
-  width: 100vw;
+  width: 100%;
   color: white;
   background-color: $primary-color1;
   padding: 1.5rem 0;
