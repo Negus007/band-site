@@ -195,7 +195,7 @@ body {
     width: 80%;
   }
 }
-.main__about img {
+.main__about-img {
   width: 100%;
 }
 .main__about-description {
@@ -205,11 +205,11 @@ body {
   width: 100%;
   margin-bottom: 1rem;
 }
-.main__about-description p {
+.main__about-description-p {
   width: 90%;
 }
 @media (min-width: 720px) {
-  .main__about-description p {
+  .main__about-description-p {
     width: 45%;
   }
 }
