@@ -269,6 +269,11 @@ body {
     right: 2.5rem;
   }
 }
+@media (min-width: 720px) {
+  .footer__copyright {
+    margin: 2rem 0 0 0;
+  }
+}
 .footer__container {
   width: 90%;
   margin: 0 auto;
@@ -314,6 +319,12 @@ body {
 }
 .footer__container-info-contact-name {
   margin: 0;
+}
+.footer__container-info-contact-location--m-b {
+  margin-bottom: 0;
+}
+.footer__container-info-contact-location--m-t {
+  margin-top: 0;
 }
 
 /*# sourceMappingURL=bio.css.map */

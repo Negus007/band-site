@@ -190,6 +190,11 @@ body {
       right: 2.5rem;
     }
   }
+  &__copyright {
+    @include tablet {
+      margin: 2rem 0 0 0;
+    }
+  }
 
   &__container {
     width: 90%;
@@ -229,7 +234,11 @@ body {
         &-name {
           margin: 0;
         }
-        &-location {
+        &-location--m-b {
+          margin-bottom: 0;
+        }
+        &-location--m-t {
+          margin-top: 0;
         }
       }
     }
