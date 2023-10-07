@@ -86,4 +86,3 @@ function removeError() {
     commentName.classList.remove("error");
   }
 }
-//commentName.addEventListener("click", removeError);
