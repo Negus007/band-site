@@ -240,15 +240,77 @@ body {
   background-color: #323232;
   opacity: 45%;
 }
-.hero__header {
+.hero__container {
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (min-width: 1280px) {
+  .hero__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+.hero__container-song {
+  margin: 0 auto;
+  width: 90%;
+}
+@media (min-width: 1280px) {
+  .hero__container-song {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 47.5%;
+  }
+}
+.hero__container iframe {
+  width: 100%;
+}
+@media (min-width: 720px) {
+  .hero__container iframe {
+    width: 70%;
+  }
+}
+.hero__container-header {
   z-index: 2;
   width: 90%;
   margin: 0 auto;
   color: white;
 }
 @media (min-width: 1280px) {
-  .hero__header {
-    width: 80%;
+  .hero__container-header {
+    width: 47.5%;
+  }
+}
+.hero__container-header h1 {
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.main__header-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main__header-box h2 {
+  width: 100%;
+}
+.main__header-box-keys {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shows-keys {
+  display: none;
+}
+@media (min-width: 720px) {
+  .shows-keys {
+    width: 25%;
+    margin-left: 1rem;
+    display: inline-block;
   }
 }
 
@@ -289,8 +351,9 @@ ul {
 }
 
 .div {
+  padding: 1rem;
   width: 90%;
-  margin: 0.5rem auto;
+  margin: 0 auto;
   border-bottom: 1px solid grey;
 }
 .div:hover {
@@ -353,6 +416,30 @@ hr {
     width: 60%;
     margin-left: 25.5rem;
   }
+}
+
+.none {
+  border-bottom: none;
+  position: absolute;
+}
+.none:hover {
+  background-color: transparent;
+}
+@media (min-width: 720px) {
+  .none {
+    position: relative;
+  }
+}
+.none-btn {
+  visibility: hidden;
+}
+
+.div:focus-within {
+  background-color: red;
+}
+
+hr {
+  width: 200%;
 }
 
 /*# sourceMappingURL=shows.css.map */

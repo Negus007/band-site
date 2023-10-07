@@ -331,6 +331,11 @@ body {
   width: 90%;
   margin: 0 auto;
 }
+@media (min-width: 1280px) {
+  .comments-section {
+    width: 80%;
+  }
+}
 
 .comment-form-box {
   width: 100%;
@@ -342,7 +347,13 @@ body {
     width: 80%;
   }
 }
+@media (min-width: 1280px) {
+  .comment-form-box {
+    width: 70%;
+  }
+}
 .comment-form-box__img {
+  padding-top: 1.4rem;
   width: 15%;
   text-align: center;
 }
@@ -359,28 +370,57 @@ body {
 }
 .comment-form-box__form {
   width: 84%;
+  position: relative;
 }
-.comment-form-box__form button {
+.comment-form-box__form .submit-btn {
+  text-transform: uppercase;
+  background-color: #323232;
+  color: #fafafa;
+  padding: 0.7rem 0;
+  border-radius: 5px;
   width: 100%;
   text-align: center;
+  border: none;
+}
+@media (min-width: 720px) {
+  .comment-form-box__form .submit-btn {
+    width: 30%;
+    display: block;
+    margin: 0 0 0 auto;
+  }
+}
+
+label {
+  margin: 0.5rem 0;
+}
+
+.error {
+  border: 1px solid #d22d2d;
+  border-radius: 4px;
 }
 
 #name {
   width: 100%;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
+}
+#name:focus {
+  outline: none;
+  border: 1px solid #323232;
+  border-radius: 4px;
 }
 
 #comment {
   width: 100%;
   height: 6rem;
+  padding: 0.7rem;
   resize: none;
   margin: 0.5rem 0 1rem 0;
 }
-
-.submit-btn {
-  background-color: #323232;
-  color: white;
-  padding: 0.5rem 0;
-  border-radius: 5px;
+#comment:focus {
+  outline: none;
+  border: 1px solid #323232;
+  border-radius: 4px;
 }
 
 .comment-card-container {
@@ -392,6 +432,11 @@ body {
 @media (min-width: 720px) {
   .comment-card-container {
     width: 80%;
+  }
+}
+@media (min-width: 1280px) {
+  .comment-card-container {
+    width: 70%;
   }
 }
 .comment-card-container__img {
@@ -429,6 +474,11 @@ body {
 @media (min-width: 720px) {
   hr {
     width: 80%;
+  }
+}
+@media (min-width: 1280px) {
+  hr {
+    width: 70%;
   }
 }
 

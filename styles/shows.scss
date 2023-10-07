@@ -20,14 +20,69 @@
     background-color: $primary-color1;
     opacity: 45%;
   }
-  &__header {
+  &__container {
     z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
     width: 90%;
-    margin: 0 auto;
-    color: white;
+    align-items: center;
+    justify-content: space-between;
     @include desktop {
       width: 80%;
+      margin: 0 auto;
     }
+    &-song {
+      margin: 0 auto;
+      width: 90%;
+      @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 47.5%;
+      }
+    }
+    iframe {
+      width: 100%;
+      @include tablet {
+        width: 70%;
+      }
+    }
+    &-header {
+      z-index: 2;
+      width: 90%;
+      margin: 0 auto;
+      color: white;
+      @include desktop {
+        width: 47.5%;
+      }
+      h1 {
+        font-weight: 600;
+        margin: 1rem 0;
+      }
+    }
+  }
+}
+.main__header {
+  &-box {
+    display: flex;
+    flex-wrap: wrap;
+    h2 {
+      width: 100%;
+    }
+    &-keys {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+.shows-keys {
+  display: none;
+  @include tablet {
+    width: 25%;
+    margin-left: 1rem;
+    display: inline-block;
   }
 }
 
@@ -61,8 +116,9 @@ ul {
 }
 
 .div {
+  padding: 1rem;
   width: 90%;
-  margin: 0.5rem auto;
+  margin: 0 auto;
   border-bottom: 1px solid grey;
 
   &:hover {
@@ -116,4 +172,26 @@ hr {
     width: 60%;
     margin-left: 25.5rem;
   }
+}
+
+.none {
+  border-bottom: none;
+  position: absolute;
+  &:hover {
+    background-color: transparent;
+  }
+  @include tablet {
+    position: relative;
+  }
+  &-btn {
+    visibility: hidden;
+  }
+}
+
+.div:focus-within {
+  background-color: red;
+}
+
+hr {
+  width: 200%;
 }
