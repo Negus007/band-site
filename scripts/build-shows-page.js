@@ -3,7 +3,30 @@ const btn = document.createElement("button");
 let showsList = document.createElement("ul");
 const hr = document.createElement("hr");
 const showsSection = document.querySelector(".main__shows-section");
-//const header = document.createElement("h2");
+const header = document.createElement("h2");
+const keysBox = document.createElement("div");
+const date = document.createElement("span");
+const venue = document.createElement("span");
+const loc = document.createElement("span");
+
+header.innerText = "Shows";
+header.classList.add("main__header");
+mainEl.prepend(header);
+showsSection.appendChild(showsList);
+btn.innerText = "Buy Tickets";
+
+keysBox.classList.add("div");
+keysBox.classList.add("none");
+date.classList.add("shows-keys");
+date.innerText = "Date";
+venue.classList.add("shows-keys");
+venue.innerText = "Venue";
+loc.classList.add("shows-keys");
+loc.innerText = "Location";
+btn.classList.add("btn");
+btn.classList.add("none-btn");
+keysBox.append(date, venue, loc, btn);
+showsList.append(keysBox);
 
 let shows = [
   {
@@ -38,11 +61,6 @@ let shows = [
     Location: "San Franciso,CA",
   },
 ];
-//header.innerText = "Shows";
-//header.classList.add("main__header");
-//mainEl.prepend(header);
-showsSection.appendChild(showsList);
-btn.innerText = "Buy Tickets";
 let newArr = Object.keys(shows[0]);
 
 console.log(newArr);
@@ -78,26 +96,7 @@ for (let i = 0; i < shows.length; i++) {
     showLoc,
     btn,
   );
-  // newDiv.appendChild(dateKey);
-  // newDiv.appendChild(showDate);
-  // newDiv.appendChild(venueKey);
-  // newDiv.appendChild(showVenue);
-  // newDiv.appendChild(locationKey);
-  // newDiv.appendChild(showLoc);
-  //newDiv.appendChild(btn);
   showsList.appendChild(newDiv);
-
-  // let listItem = document.createElement("li");
-  //listItem.innerHTML = `${newArr[0]}--${shows[i].Date}--${newArr[1]}-${shows[i].Venue}---${newArr[2]}--${shows[i].Location}
-  // <button class ="btn">BUY TICKETS</button><hr>`;
-  //showsList.appendChild(listItem);
-  //listItem.innerHTML = `${shows[i].Date} <button class="btn">Buy Tickets</button>`;
-  //showsList.appendChild(listItem);
-  // showsList.innerHTML += `<div class="div"><l1 class="keys">${newArr[0]}</l1>
-  //   <li class="dates">${shows[i].Date}</li>
-  // <li class="keys">${newArr[1]}</li><li>${shows[i].Venue}</li>
-  // <li class="keys">${newArr[2]}</li><li>${shows[i].Location}</li>
-  // <button class="btn">Buy Tickets</button></div><hr>`;
 }
 console.log();
 

@@ -5,7 +5,7 @@ let formatDate = date.toLocaleDateString();
 const commentName = document.getElementById("name");
 const commentBody = document.getElementById("comment");
 
-function submitHandler(e) {
+function displayComment(e) {
   e.preventDefault();
   commentSec.innerText = "";
   const formNameVal = e.target.name.value;
@@ -79,7 +79,7 @@ const commentSubmit = function () {
 
 commentSubmit();
 
-form.addEventListener("submit", submitHandler);
+form.addEventListener("submit", displayComment);
 
 function removeError() {
   if (commentName.classList.contains("error")) {
