@@ -131,6 +131,14 @@
   &__form {
     width: 84%;
     position: relative;
+    &-name {
+      color: $primary-color2;
+      font-weight: 600;
+    }
+    &-comment {
+      color: $primary-color2;
+      font-weight: 600;
+    }
     .submit-btn {
       text-transform: uppercase;
       background-color: $primary-color1;
@@ -211,6 +219,12 @@ label {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    &-name {
+      font-weight: 600;
+    }
+    &-date {
+      color: $primary-color2;
+    }
     &-body {
       width: 100%;
     }
