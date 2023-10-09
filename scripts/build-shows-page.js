@@ -1,4 +1,5 @@
 const mainEl = document.querySelector("main");
+const headerBox = document.querySelector(".main__header-box");
 const btn = document.createElement("button");
 let showsList = document.createElement("ul");
 const hr = document.createElement("hr");
@@ -11,7 +12,7 @@ const loc = document.createElement("span");
 
 header.innerText = "Shows";
 header.classList.add("main__header");
-mainEl.prepend(header);
+headerBox.prepend(header);
 showsSection.appendChild(showsList);
 btn.innerText = "Buy Tickets";
 
@@ -67,7 +68,7 @@ console.log(newArr);
 for (let i = 0; i < shows.length; i++) {
   const newDiv = document.createElement("div");
   newDiv.classList.add("div");
-  newDiv.classList.add("focus");
+  newDiv.setAttribute("tabindex", "0");
   const dateKey = document.createElement("span");
   dateKey.classList.add("keys");
   const showDate = document.createElement("li");

@@ -191,7 +191,7 @@ label {
   width: 100%;
   display: flex;
   margin: 0.5rem auto;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid $secondary-color2;
   @include tablet {
     width: 80%;
   }

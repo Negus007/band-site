@@ -79,6 +79,14 @@ body {
   box-sizing: border-box;
   padding-top: 1.5rem;
 }
+.nav__shows {
+  height: 7.5rem;
+}
+@media (min-width: 48rem) {
+  .nav__shows {
+    height: 7rem;
+  }
+}
 @media (min-width: 48rem) {
   .nav {
     height: 6.5rem;
@@ -119,14 +127,49 @@ body {
   }
 }
 .nav__box-list-item {
-  width: 48%;
+  width: 49%;
   text-align: center;
   display: inline-block;
 }
+.nav__box-list-item:hover {
+  position: relative;
+  z-index: 3;
+}
+.nav__box-list-item:hover::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-bottom: 3.5px solid white;
+  padding-top: 3.1rem;
+}
+@media (min-width: 48rem) {
+  .nav__box-list-item:hover::before {
+    border: none;
+  }
+}
 .nav__box-list-item-link {
   text-decoration: none;
-  color: white;
+  color: #afafaf;
   z-index: 2;
+}
+.nav__box-list-item-link:hover {
+  color: #fff;
+}
+@media (min-width: 48rem) {
+  .nav__box-list-item-link:hover {
+    padding-bottom: 2.4rem;
+    border-bottom: 4px solid #fff;
+  }
+}
+.nav__box-list-item-link-active {
+  color: #fff;
+}
+@media (min-width: 48rem) {
+  .nav__box-list-item-link-active {
+    border-bottom: 4px solid #fff;
+    padding-bottom: 2.4rem;
+  }
 }
 .nav__box-list-item--active {
   position: relative;
@@ -142,7 +185,7 @@ body {
 }
 @media (min-width: 48rem) {
   .nav__box-list-item--active::before {
-    padding-top: 3.8rem;
+    border: none;
   }
 }
 
@@ -435,7 +478,7 @@ label {
   width: 100%;
   display: flex;
   margin: 0.5rem auto;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #e1e1e1;
 }
 @media (min-width: 48rem) {
   .comment-card-container {
