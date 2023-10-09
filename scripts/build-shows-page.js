@@ -16,7 +16,7 @@ headerBox.prepend(header);
 showsSection.appendChild(showsList);
 btn.innerText = "Buy Tickets";
 
-keysBox.classList.add("div");
+keysBox.classList.add("shows-container");
 keysBox.classList.add("none");
 date.classList.add("shows-keys");
 date.innerText = "Date";
@@ -67,7 +67,7 @@ let newArr = Object.keys(shows[0]);
 console.log(newArr);
 for (let i = 0; i < shows.length; i++) {
   const newDiv = document.createElement("div");
-  newDiv.classList.add("div");
+  newDiv.classList.add("shows-container");
   newDiv.setAttribute("tabindex", "0");
   const dateKey = document.createElement("span");
   dateKey.classList.add("keys");

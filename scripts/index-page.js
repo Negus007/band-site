@@ -18,8 +18,6 @@ function displayComment(e) {
     commentName.value = "";
     commentSubmit();
   } else {
-    // commentBody.value = "";
-    // commentName.value = "";
     form.reset();
     comments.unshift({
       name: `${formNameVal}`,

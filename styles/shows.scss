@@ -41,11 +41,12 @@
 
         width: 47.5%;
       }
-    }
-    iframe {
-      width: 100%;
-      @include tablet {
-        width: 70%;
+
+      &-iframe {
+        width: 100%;
+        @include tablet {
+          width: 90%;
+        }
       }
     }
     &-header {
@@ -56,7 +57,7 @@
       @include desktop {
         width: 47.5%;
       }
-      h1 {
+      &-h1 {
         font-weight: 600;
         margin: 1rem 0;
       }
@@ -124,9 +125,7 @@
     display: inline;
   }
 }
-ul {
-  list-style: none;
-}
+
 .dates {
   font-weight: 600;
 }
@@ -137,7 +136,7 @@ ul {
   }
 }
 
-.div {
+.shows-container {
   padding: 1rem;
   width: 95%;
   margin: 0 auto;
@@ -157,6 +156,9 @@ ul {
   }
   @include desktop {
   }
+}
+ul {
+  list-style: none;
 }
 
 li {

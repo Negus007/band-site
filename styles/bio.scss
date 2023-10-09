@@ -118,7 +118,7 @@
     padding-top: 1.4rem;
     width: 15%;
     text-align: center;
-    img {
+    &-avatar {
       height: 3rem;
       width: 3rem;
       border-radius: 50%;
@@ -156,9 +156,7 @@
     }
   }
 }
-label {
-  margin: 0.5rem 0;
-}
+
 .error {
   border: 1px solid #d22d2d;
   border-radius: 4px;
@@ -236,7 +234,7 @@ label {
   margin: 0 auto;
 }
 
-hr {
+.hr {
   @include tablet {
     width: 80%;
   }
