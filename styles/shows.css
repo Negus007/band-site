@@ -67,6 +67,7 @@ h3 {
 }
 
 body {
+  background-color: white;
   margin: 0;
   overflow-x: hidden;
   font-family: "Avenir Next";
@@ -416,6 +417,19 @@ body {
   }
 }
 
+.hidden-keys {
+  padding: 1rem;
+  width: 95%;
+  margin: 0 auto;
+}
+@media (min-width: 48rem) {
+  .hidden-keys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .shows-container {
   padding: 1rem;
   width: 95%;
@@ -426,9 +440,6 @@ body {
   background-color: #fafafa;
   cursor: pointer;
 }
-.shows-container:focus {
-  background: #e1e1e1;
-}
 @media (min-width: 48rem) {
   .shows-container {
     display: flex;
@@ -436,6 +447,7 @@ body {
     align-items: center;
   }
 }
+
 ul {
   list-style: none;
 }
@@ -465,6 +477,13 @@ li {
 }
 .none-btn {
   visibility: hidden;
+}
+
+.div-active {
+  background-color: #afafaf;
+}
+.div-active:hover {
+  background-color: #afafaf;
 }
 
 /*# sourceMappingURL=shows.css.map */

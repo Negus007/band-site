@@ -16,7 +16,7 @@ headerBox.prepend(header);
 showsSection.appendChild(showsList);
 btn.innerText = "Buy Tickets";
 
-keysBox.classList.add("shows-container");
+keysBox.classList.add("hidden-keys");
 keysBox.classList.add("none");
 date.classList.add("shows-keys");
 date.innerText = "Date";
@@ -68,7 +68,7 @@ console.log(newArr);
 for (let i = 0; i < shows.length; i++) {
   const newDiv = document.createElement("div");
   newDiv.classList.add("shows-container");
-  newDiv.setAttribute("tabindex", "0");
+  //newDiv.setAttribute("tabindex", "0");
   const dateKey = document.createElement("span");
   dateKey.classList.add("keys");
   const showDate = document.createElement("li");
@@ -101,5 +101,13 @@ for (let i = 0; i < shows.length; i++) {
 }
 console.log();
 
-const focusDiv = document.querySelector(".focus");
-console.log(focusDiv);
+const activeShows = document.querySelectorAll(".shows-container");
+
+activeShows.forEach((show) =>
+  show.addEventListener("click", () => {
+    activeShows.forEach((othershow) =>
+      othershow.classList.remove("div-active"),
+    );
+    show.classList.add("div-active");
+  }),
+);

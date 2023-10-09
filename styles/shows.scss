@@ -136,6 +136,17 @@
   }
 }
 
+.hidden-keys {
+  padding: 1rem;
+  width: 95%;
+  margin: 0 auto;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
 .shows-container {
   padding: 1rem;
   width: 95%;
@@ -145,16 +156,10 @@
     background-color: $secondary-color3;
     cursor: pointer;
   }
-  &:focus {
-    background: $secondary-color2;
-  }
-
   @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  @include desktop {
   }
 }
 ul {
@@ -181,5 +186,12 @@ li {
   }
   &-btn {
     visibility: hidden;
+  }
+}
+
+.div-active {
+  background-color: $primary-color2;
+  &:hover {
+    background-color: $primary-color2;
   }
 }
