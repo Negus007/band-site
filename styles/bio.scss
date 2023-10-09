@@ -200,7 +200,7 @@
   &__img {
     width: 15%;
     text-align: center;
-    img {
+    &-avatar {
       border: none;
       background-color: $secondary-color2;
       height: 3rem;
@@ -235,6 +235,7 @@
 }
 
 .hr {
+  color: $secondary-color2;
   @include tablet {
     width: 80%;
   }

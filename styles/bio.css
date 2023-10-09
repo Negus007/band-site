@@ -490,7 +490,7 @@ body {
   width: 15%;
   text-align: center;
 }
-.comment-card-container__img img {
+.comment-card-container__img-avatar {
   border: none;
   background-color: #e1e1e1;
   height: 3rem;
@@ -498,7 +498,7 @@ body {
   border-radius: 50%;
 }
 @media (min-width: 48rem) {
-  .comment-card-container__img img {
+  .comment-card-container__img-avatar {
     height: 3.5rem;
     width: 3.5rem;
   }
@@ -524,6 +524,9 @@ body {
   margin: 0 auto;
 }
 
+.hr {
+  color: #e1e1e1;
+}
 @media (min-width: 48rem) {
   .hr {
     width: 80%;

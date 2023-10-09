@@ -54,6 +54,7 @@ const commentSubmit = function () {
     const commentImg = document.createElement("div");
     commentImg.classList.add("comment-card-container__img");
     const newImg = document.createElement("img");
+    newImg.classList.add("comment-card-container__img-avatar");
     const commentBox = document.createElement("div");
     commentBox.classList.add("comment-card-container__comment");
     const commentName = document.createElement("span");
