@@ -282,7 +282,7 @@ body {
   position: absolute;
   inset: 0;
   background-color: #323232;
-  opacity: 45%;
+  opacity: 50%;
 }
 .hero__container {
   z-index: 2;
