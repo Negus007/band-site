@@ -1,4 +1,4 @@
-const mainEl = document.querySelector("main");
+const main = document.querySelector("main");
 const headerBox = document.querySelector(".main__header-box");
 const btn = document.createElement("button");
 let showsList = document.createElement("ul");
@@ -12,7 +12,7 @@ const loc = document.createElement("span");
 
 header.innerText = "Shows";
 header.classList.add("main__header");
-headerBox.prepend(header);
+headerBox.append(header);
 showsSection.appendChild(showsList);
 btn.innerText = "Buy Tickets";
 
@@ -65,49 +65,67 @@ let shows = [
 let newArr = Object.keys(shows[0]);
 
 console.log(newArr);
-for (let i = 0; i < shows.length; i++) {
-  const newDiv = document.createElement("div");
-  newDiv.classList.add("shows-container");
-  //newDiv.setAttribute("tabindex", "0");
-  const dateKey = document.createElement("span");
-  dateKey.classList.add("keys");
-  const showDate = document.createElement("li");
-  showDate.classList.add("dates");
-  const venueKey = document.createElement("span");
-  venueKey.classList.add("keys");
-  const showVenue = document.createElement("li");
-  const locationKey = document.createElement("span");
-  locationKey.classList.add("keys");
-  const showLoc = document.createElement("li");
-  dateKey.innerText = newArr[0];
-  showDate.innerText = shows[i].Date;
-  venueKey.innerText = newArr[1];
-  showVenue.innerText = shows[i].Venue;
-  locationKey.innerText = newArr[2];
-  showLoc.innerText = shows[i].Location;
-  const btn = document.createElement("button");
-  btn.innerText = "Buy Tickets";
-  btn.classList.add("btn");
-  newDiv.append(
-    dateKey,
-    showDate,
-    venueKey,
-    showVenue,
-    locationKey,
-    showLoc,
-    btn,
-  );
-  showsList.appendChild(newDiv);
-}
-console.log();
-
-const activeShows = document.querySelectorAll(".shows-container");
-
-activeShows.forEach((show) =>
-  show.addEventListener("click", () => {
-    activeShows.forEach((othershow) =>
-      othershow.classList.remove("div-active"),
+const displayShows = async () => {
+  const showsData = await backend.getShows();
+  const shows = await document.querySelector(".shows-container");
+  for (let i = 0; i < showsData.length; i++) {
+    const date = new Date(showsData[i].date).toDateString();
+    const newDiv = document.createElement("div");
+    newDiv.classList.add("shows-container");
+    const dateKey = document.createElement("span");
+    dateKey.classList.add("keys");
+    const showDate = document.createElement("li");
+    showDate.classList.add("dates");
+    const venueKey = document.createElement("span");
+    venueKey.classList.add("keys");
+    const showVenue = document.createElement("li");
+    const locationKey = document.createElement("span");
+    locationKey.classList.add("keys");
+    const showLoc = document.createElement("li");
+    dateKey.innerText = newArr[0];
+    showDate.innerText = date;
+    venueKey.innerText = newArr[1];
+    showVenue.innerText = showsData[i].place;
+    locationKey.innerText = newArr[2];
+    showLoc.innerText = showsData[i].location;
+    const btn = document.createElement("button");
+    btn.innerText = "Buy Tickets";
+    btn.classList.add("btn");
+    newDiv.append(
+      dateKey,
+      showDate,
+      venueKey,
+      showVenue,
+      locationKey,
+      showLoc,
+      btn,
     );
-    show.classList.add("div-active");
-  }),
-);
+    showsList.appendChild(newDiv);
+  }
+};
+
+const capEle = () => {
+  const activeShows = document.querySelectorAll(".shows-container");
+  activeShows.forEach((show) =>
+    show.addEventListener("click", () => {
+      activeShows.forEach((othershow) =>
+        othershow.classList.remove("div-active"),
+      );
+      show.classList.add("div-active");
+    }),
+  );
+  console.log(activeShows);
+  return activeShows;
+};
+setTimeout(capEle, 500);
+
+displayShows();
+
+// activeShows.forEach((show) =>
+//  show.addEventListener("click", () => {
+//    activeShows.forEach((othershow) =>
+//      othershow.classList.remove("div-active"),
+//    );
+//    show.classList.add("div-active");
+//  }),
+// );

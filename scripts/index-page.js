@@ -47,8 +47,10 @@ const comments = [
     body: "I can't stop listening. Everytime I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
   },
 ];
-const commentSubmit = function () {
-  for (let i = 0; i < comments.length; i++) {
+const displayComments = async () => {
+  const comms = await backend.getComment();
+  for (let i = 0; i < comms.length; i++) {
+    let date = new Date(comms[i].timestamp).toLocaleDateString();
     const newComment = document.createElement("div");
     newComment.classList.add("comment-card-container");
     const commentImg = document.createElement("div");
@@ -63,9 +65,9 @@ const commentSubmit = function () {
     commentDate.classList.add("comment-card-container__comment-date");
     const commentBody = document.createElement("p");
     commentBody.classList.add("comment-card-container__comment-body");
-    commentName.innerText = comments[i].name;
-    commentDate.innerText = comments[i].date;
-    commentBody.innerText = comments[i].body;
+    commentName.innerText = comms[i].name;
+    commentDate.innerText = date;
+    commentBody.innerText = comms[i].comment;
     commentImg.appendChild(newImg);
     commentBox.appendChild(commentName);
     commentBox.appendChild(commentDate);
@@ -76,7 +78,7 @@ const commentSubmit = function () {
   }
 };
 
-commentSubmit();
+displayComments();
 
 form.addEventListener("submit", displayComment);
 
