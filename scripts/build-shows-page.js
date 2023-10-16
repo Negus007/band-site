@@ -67,7 +67,6 @@ let newArr = Object.keys(shows[0]);
 console.log(newArr);
 const displayShows = async () => {
   const showsData = await backend.getShows();
-  const shows = await document.querySelector(".shows-container");
   for (let i = 0; i < showsData.length; i++) {
     const date = new Date(showsData[i].date).toDateString();
     const newDiv = document.createElement("div");
@@ -102,7 +101,12 @@ const displayShows = async () => {
     );
     showsList.appendChild(newDiv);
   }
+  //const showCon = document.querySelectorAll(".shows-container");
+  //return showCon;
+  //console.log(newDiv);
+  //newDiv.addEventListener("click", capEle);
 };
+//newDiv.addEventListener("click", capEle);
 
 const capEle = () => {
   const activeShows = document.querySelectorAll(".shows-container");
@@ -117,15 +121,17 @@ const capEle = () => {
   console.log(activeShows);
   return activeShows;
 };
-setTimeout(capEle, 500);
+//setTimeout(capEle, 500);
 
 displayShows();
-
-// activeShows.forEach((show) =>
+//console.log(activeShows);
+//activeShows.forEach((show) =>
 //  show.addEventListener("click", () => {
 //    activeShows.forEach((othershow) =>
 //      othershow.classList.remove("div-active"),
 //    );
 //    show.classList.add("div-active");
 //  }),
-// );
+//);
+
+showsList.addEventListener("click", capEle);

@@ -8,13 +8,24 @@ class BandSiteAPI {
     (this.apiKey = apiKey),
       (this.baseURL = "https://project-1-api.herokuapp.com/");
   }
+  async deleteComment(id) {
+    try {
+      const response = await axios.delete(
+        `${this.baseURL}comments/${id}${apiKey1}`,
+      );
+      return response;
+    } catch (error) {
+      console.error(error);
+    }
+  }
   async postComment(comment) {
     try {
-      const response = await axios.postComment(
+      const response = await axios.post(
         `${this.baseURL}comments${this.apiKey}`,
         comment,
       );
       commSec = response.data;
+      return commSec;
     } catch (error) {
       console.error(error);
     }
@@ -23,6 +34,8 @@ class BandSiteAPI {
     try {
       const response = await axios.get(`${this.baseURL}comments${this.apiKey}`);
       commSec = response.data;
+      commSec.sort((a, b) => b.timestamp - a.timestamp);
+
       return commSec;
     } catch (error) {
       console.error(error);
