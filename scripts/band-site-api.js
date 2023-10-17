@@ -1,6 +1,3 @@
-let commSec = [];
-let showData = [];
-
 const apiKey1 = "?api_key=c55b716b-1954-4c01-8751-5f9592a5cfb6";
 
 class BandSiteAPI {
