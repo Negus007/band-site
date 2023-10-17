@@ -519,6 +519,9 @@ body {
 .comment-card-container__comment-body {
   width: 100%;
 }
+.comment-card-container__comment-dlt {
+  margin-bottom: 0.5rem;
+}
 
 .new-comments {
   width: 100%;

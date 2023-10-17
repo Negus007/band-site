@@ -21,7 +21,7 @@ class BandSiteAPI {
         `${this.baseURL}comments${this.apiKey}`,
         comment,
       );
-      commSec = response.data;
+      const commSec = response.data;
       return commSec;
     } catch (error) {
       console.error(error);
@@ -30,7 +30,7 @@ class BandSiteAPI {
   async getComment() {
     try {
       const response = await axios.get(`${this.baseURL}comments${this.apiKey}`);
-      commSec = response.data;
+      const commSec = response.data;
       commSec.sort((a, b) => b.timestamp - a.timestamp);
 
       return commSec;
@@ -43,7 +43,7 @@ class BandSiteAPI {
       const response = await axios.get(
         `${this.baseURL}showdates${this.apiKey}`,
       );
-      showData = response.data;
+      const showData = response.data;
       return showData;
     } catch (error) {
       console.error(error);

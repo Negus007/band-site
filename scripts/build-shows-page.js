@@ -29,9 +29,6 @@ btn.classList.add("none-btn");
 keysBox.append(date, venue, loc, btn);
 showsList.append(keysBox);
 
-let newArr = Object.keys(shows[0]);
-
-console.log(newArr);
 const displayShows = async () => {
   const showsData = await backend.getShows();
   for (let i = 0; i < showsData.length; i++) {
@@ -48,11 +45,11 @@ const displayShows = async () => {
     const locationKey = document.createElement("span");
     locationKey.classList.add("keys");
     const showLoc = document.createElement("li");
-    dateKey.innerText = newArr[0];
+    dateKey.innerText = "Date";
     showDate.innerText = date;
-    venueKey.innerText = newArr[1];
+    venueKey.innerText = "Venue";
     showVenue.innerText = showsData[i].place;
-    locationKey.innerText = newArr[2];
+    locationKey.innerText = "Location";
     showLoc.innerText = showsData[i].location;
     const btn = document.createElement("button");
     btn.innerText = "Buy Tickets";
